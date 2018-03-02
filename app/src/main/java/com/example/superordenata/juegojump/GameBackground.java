@@ -9,14 +9,20 @@ public class GameBackground extends GameObject {
     //Still, Moving, MovingWhitTouch
     private Movement movement = Movement.STILL;
     private int backgroundX;
+    private int backgroundY;
 
     public GameBackground(Image background) {
         super(background);
         this.backgroundX = this.getImage().getBitmap().getWidth();
+        this.backgroundY = this.getImage().getBitmap().getHeight();
     }
 
     private int getBackgroundX() {
         return this.backgroundX;
+    }
+
+    private int getBackgroundY() {
+        return this.backgroundY;
     }
 
     private void movingWithTouch() {
@@ -41,8 +47,12 @@ public class GameBackground extends GameObject {
         this.movement = movement;
     }
 
-    private void setBackgroundX(int x) {
+    public void setBackgroundX(int x) {
         this.backgroundX = x;
+    }
+
+    public void setBackgroundY(int y) {
+        this.backgroundY = y;
     }
 
     @Override

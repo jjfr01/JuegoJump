@@ -101,6 +101,16 @@ public abstract class GenericGameActivity extends AppCompatActivity {
         }
     }
 
+    public void removeGameObject (GameObject gameObject){
+        Iterator<GameObject> i = gameObjects.iterator();
+        while (i.hasNext()) {
+            GameObject aux = i.next();
+            if(aux == gameObject){
+                i.remove();
+            }
+        }
+    }
+
     public abstract void start();
 
     public void update() {

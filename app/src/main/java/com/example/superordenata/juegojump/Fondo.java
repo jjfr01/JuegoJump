@@ -1,14 +1,13 @@
 package com.example.superordenata.juegojump;
 
-/**
- * Created by dam on 14/02/2018.
- */
 
 public class Fondo extends GameBackground{
 
 
     public Fondo() {
-        super(Assets.pk2);
+        super(Assets.background);
+        this.setBackgroundX(getGraphics().getWidth());
+        this.setBackgroundY(getGraphics().getHeight());
         this.setMovement(Movement.MOVING);
     }
 }
